@@ -14,7 +14,8 @@ const Item = ({ post }: ICardNewsProps) => {
 	};
 
 	const formatDate = (dateString: any) => {
-		return new Date(dateString).toLocaleDateString('en-US');
+		var options: any = { year: 'numeric', month: 'long', day: 'numeric' };
+		return new Date(dateString).toLocaleDateString('en-US', options);
 	};
 
 	return (
